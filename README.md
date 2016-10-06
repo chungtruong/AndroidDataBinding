@@ -1,6 +1,9 @@
 # AndroidDataBinding
 Example of Android Model View View Model and DataBinding for android applications
 
+# Contribution
+Feel free to add any issues, I will be glad to improve it with your help
+
 # License
 MIT License
 
