@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.chungtruong.databinding.viewmodel.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint='@{loginViewModel.loginRequest.emailEmpty ? @string/email : loginViewModel.loginRequest.validEmail ? @string/email : @string/invalid_email}'>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:addTextChangedListener="@{loginViewModel.getUsernameTextWatcher}" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint='@{loginViewModel.loginRequest.passwordEmpty ? @string/password : loginViewModel.loginRequest.validPassword ? @string/password : @string/invalid_password}'>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:addTextChangedListener="@{loginViewModel.getPasswordTextWatcher}" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="@{loginViewModel.loginRequest.validInput}"
+            android:onClick="@{loginViewModel.onLoginClicked}"
+            android:text="Login" />
+
+    </LinearLayout>
+</layout>

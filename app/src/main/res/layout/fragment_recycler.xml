@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="recyclerViewModel"
+            type="com.chungtruong.databinding.viewmodel.RecyclerViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{recyclerViewModel.moreApps.visibleProgressBar ? View.VISIBLE : View.GONE}" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{recyclerViewModel.moreApps.visibleProgressBar ? View.GONE : View.VISIBLE}"
+            app:refreshing="@{recyclerViewModel.moreApps.refreshing}"
+            app:onRefreshListener="@{recyclerViewModel.onRefreshListener}">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:items="@{recyclerViewModel.moreApps.apps}">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:text="Oops! Something is wrong. Please try again."
+            android:visibility="@{recyclerViewModel.moreApps.visibleProgressBar || recyclerViewModel.moreApps.refreshing ? View.GONE : recyclerViewModel.moreApps.isNotEmpty ? View.GONE : View.VISIBLE}"/>
+
+    </RelativeLayout>
+</layout>

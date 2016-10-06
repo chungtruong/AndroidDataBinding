@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="moreapp"
+            type="com.chungtruong.databinding.model.MoreApp" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:imageUrl="@{moreapp.appicon}" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/app_icon"
+            android:text="@{moreapp.appname}" />
+
+        <TextView
+            android:id="@+id/app_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/app_icon"
+            android:text="@{moreapp.appauthor}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/app_icon"
+            android:layout_marginTop="5dp"
+            android:background="#cccccc" />
+
+    </RelativeLayout>
+</layout>

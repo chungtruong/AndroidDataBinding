@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="simpleViewModel"
+            type="com.chungtruong.databinding.viewmodel.SimpleViewModel" />
+
+        <variable
+            name="numberObject"
+            type="com.chungtruong.databinding.model.NumberObject" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:addTextChangedListener="@{simpleViewModel.getFirstValueTextWatcher}"
+            android:inputType="number"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="+" />
+
+        <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:addTextChangedListener="@{simpleViewModel.getSecondValueTextWatcher}"
+            android:inputType="number"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="=" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:text="@{String.valueOf(simpleViewModel.numberObject.total())}" />
+
+    </LinearLayout>
+</layout>
