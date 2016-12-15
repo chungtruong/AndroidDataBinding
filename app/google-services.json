@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "493206785489",
+    "firebase_url": "https://databinding-f43d6.firebaseio.com",
+    "project_id": "databinding-f43d6",
+    "storage_bucket": "databinding-f43d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493206785489:android:b4e505ee47b753ec",
+        "android_client_info": {
+          "package_name": "com.chungtruong.databinding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493206785489-5tlaf3t5qt0k0l0m7vcf2ajea5f0ofvh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chungtruong.databinding",
+            "certificate_hash": "3E52F54877EDF7E4A2889EF479A9674D13E2E0F6"
+          }
+        },
+        {
+          "client_id": "493206785489-e3a66hkoa9j5p1hpcl5clhd3v6t24qhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo9TzJXqm8pNnPYit0MhCimhl2vVeGdtM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493206785489-e3a66hkoa9j5p1hpcl5clhd3v6t24qhf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

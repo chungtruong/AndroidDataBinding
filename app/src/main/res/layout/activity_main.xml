@@ -35,6 +35,12 @@
             android:onClick="@{mainViewModel.onRecyclerViewDemoClicked}"
             android:text="Recycler View Demo" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realm Demo"
+            android:onClick="@{mainViewModel.onRealmDemoClicked}"/>
+
     </LinearLayout>
 </layout>
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.chungtruong.databinding.activity.LoginActivity;
+import com.chungtruong.databinding.activity.RealmActivity;
 import com.chungtruong.databinding.activity.RecyclerActivity;
 import com.chungtruong.databinding.activity.SimpleActivity;
 
@@ -30,6 +31,10 @@ public class MainViewModel {
 
     public void onRecyclerViewDemoClicked(View view) {
         startActivity(RecyclerActivity.class);
+    }
+
+    public void onRealmDemoClicked(View view) {
+        startActivity(RealmActivity.class);
     }
 
     private void startActivity(Class clazz) {
